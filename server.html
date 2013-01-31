@@ -14,12 +14,12 @@ title: HTTP server
   <h5>Options:</h5>
   <ul>
     <li><code>:ip</code>: which IP to bind, default to <code>0.0.0.0</code></li>
-    <li><code>:port</code>: which port listens incomming request, default to 8090</li>
+    <li><code>:port</code>: which port listens incoming request, default to 8090</li>
     <li><code>:thread</code>: How many threads to compute response from request, default to 4</li>
     <li><code>:worker-name-prefix</code>: woker thread name prefix, default to <code>worker-</code>: <code>worker-1</code> <code>worker-2</code>....</li>
     <li><code>:queue-size</code>: max requests queued waiting for threadpool to compute response before reject, 503 will be returned to client if queue is full, default to 20k, </li>
     <li><code>:max-body</code>: length limit for http body in bytes, 413 will be returned if exceeds the limit, default to 8388608(8M)</li>
-    <li><code>:max-line</code>: length limit for inital line and per header, 414 will be returned if exceeds the limit, default to 4096(4k)</li>
+    <li><code>:max-line</code>: length limit for initial line and per header, 414 will be returned if exceeds the limit, default to 4096(4k)</li>
   </ul>
 
 {% highlight clojure %}
@@ -40,7 +40,7 @@ title: HTTP server
     <li><code>on-mesg</code>: register a fn to be called when there is message from client</li>
     <li><code>send-mesg</code>: send message to client</li>
     <li><code>close-conn</code>: close the websocket connection</li>
-    <li><code>on-close</code>: register a fn to be called when the connecton is closed</li>
+    <li><code>on-close</code>: register a fn to be called when the connection is closed</li>
   </ul>
 {% highlight clojure %}
 
